@@ -1,0 +1,20 @@
+client	Column	id	client_code	type	partner_id	created_at	updated_at
+client	Type	integer	character varying(13)	character varying(16)	integer	timestamp without time zone	timestamp without time zone
+	Collation						
+client	Nullable	not null	not null	not null		not null	not null
+client	Default	generated always as identity				now()	now()
+client	Value	10001	C00010001	seller	1		
+client	Value	10011	C00010011	seller	1		
+client	Value	10021	C00010021	seller	1		
+client	Value	10031	C00010031	seller	1		
+client	Value	10002	C00010002	seller	2		
+client	Value	10012	C00010012	seller	2		
+client	Value	10022	C00010022	seller	2		
+client	Value	10032	C00010032	seller	2		
+client	Value	10003	C00010003	seller			
+client	Value	10004	C00010004	seller			
+client	Value	10005	C00010005	seller			
+client	Value	10006	C00010006	seller			
+client	Value	10007	C00010007	seller			
+client	Value	10008	C00010008	seller			
+				

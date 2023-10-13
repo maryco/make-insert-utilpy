@@ -1,0 +1,9 @@
+access_logs	COLUMN_NAME	id	user_id	method	url	request	created_at
+access_logs	COLUMN_TYPE	int unsigned	varchar(255)	varchar(8)	varchar(255)	json	timestamp
+access_logs	IS_NULLABLE	NO	NO	NO	NO	YES	NO
+access_logs	COLUMN_KEY	PRI	MUL				
+access_logs	COLUMN_DEFAULT						
+access_logs	EXTRA	auto_increment					
+access_logs	value		test000001	post	http://localhost/post	{"comment": 1}	2023/10/08 21:41:29
+access_logs	value		test000001	get	http://localhost/user/12345		2023/10/08 21:41:29
+access_logs	value		test000001	get	http://localhost/user/67890		2023/10/08 21:41:29

@@ -12,24 +12,24 @@ https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html
 
 ## TIPS: 
 
-MySQL logging cli 
+### MySQL logging cli 
 
 > \T ./output.txt
 >> Logging to file './output.txt'
 
-MySQL execute from file and result to file
+### MySQL execute from file and result to file
 
 > --batch, -B ...カラム区切り文字としてタブを使用し、各行を新しい行に出力します
 > --execute, -e ...SQL実行
 
-> mysql {connect to target db options} -B < select_all_ddl_mysql.sql > my_local_db_all_ddl.sql.tsv
+> mysql {connect to target db options} -B < something.sql > something.sql.tsv
 
 ```sql
 select 
-  TABLE_NAME, COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA
+  table_name, column_name, column_type, is_nullable, column_key, column_default, extra
   from information_schema.columns
-  where TABLE_SCHEMA = 'my_local_db'
-  order by TABLE_NAME, ORDINAL_POSITION
+  where table_schema = 'my_local_db'
+  order by table_name, ordinal_position
 ```
 
 - INFORMATION_SCHEMA COLUMNS テーブル

@@ -27,7 +27,7 @@ class InsertBuilder(metaclass=ABCMeta):
                 df_colmn_def.loc['nullables'].values[0],
                 df_colmn_def.loc['defaults'].values[0])
             if not _value is None:
-                _columns.append(column)
+                _columns.append(f"`{column}`")
                 _values.append(_value)
         return _columns, _values
 
@@ -85,7 +85,7 @@ class InsertForMySQL(InsertBuilder):
 
     def _is_string_type(self, type: str) -> bool:
         return not any(type.startswith(num_type)
-                       for num_type in ["int", "bigint", "smallint", "tinyint", "float", "double"])
+                       for num_type in ["int", "bigint", "smallint", "tinyint", "float", "double", "timestamp"])
 
 
 class InsertForPostgreSQL(InsertBuilder):

@@ -1,0 +1,5 @@
+select 
+  TABLE_NAME, COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA
+  from information_schema.columns
+  where TABLE_SCHEMA = 'somedb'
+  order by TABLE_NAME, ORDINAL_POSITION

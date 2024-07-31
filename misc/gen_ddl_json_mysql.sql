@@ -14,7 +14,7 @@ select JSON_ARRAYAGG(
           'position', ordinal_position
 				)
 			) from information_schema.columns as cols
-			where table_schema = 'sampledb' and cols.table_name = tbls.table_name order by cols.ordinal_position
+			where table_schema = 'somedb' and cols.table_name = tbls.table_name order by cols.ordinal_position
 		),
 		'constants', (
 			select JSON_ARRAYAGG(
@@ -24,9 +24,9 @@ select JSON_ARRAYAGG(
 					'noUnique', non_unique
 				)
 			) from information_schema.statistics as sta
-			where sta.table_schema = 'sampledb' and sta.table_name = tbls.table_name
+			where sta.table_schema = 'somedb' and sta.table_name = tbls.table_name
 		)
 	)
 )
 from information_schema.tables as tbls
-  where table_schema = 'sampledb' order by table_name;
+  where table_schema = 'somedb' order by table_name;

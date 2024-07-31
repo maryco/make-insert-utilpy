@@ -6,7 +6,7 @@ import pandas as pd
 """
 1. Get all table definitions from target database.
 
-> mysql {connect to target db options} -B < select_all_ddl_mysql.sql > all_ddl.tsv
+> mysql {connect to target db options} -B < ddls_mysql.sql > all_ddl.tsv
 
 ```sql
 select 

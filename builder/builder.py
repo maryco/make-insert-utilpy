@@ -85,7 +85,7 @@ class InsertForMySQL(InsertBuilder):
 
     def _is_string_type(self, type: str) -> bool:
         return not any(type.startswith(num_type)
-                       for num_type in ["int", "bigint", "smallint", "tinyint", "float", "double", "timestamp"])
+                       for num_type in ["int", "bigint", "smallint", "tinyint", "float", "double"])
 
 
 class InsertForPostgreSQL(InsertBuilder):
